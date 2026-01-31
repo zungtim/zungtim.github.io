@@ -1,9 +1,49 @@
 baseURL = "https://zungtim.github.io/"
 languageCode = "zh-cn"
-title = "我的个人主页"
-theme = "PaperMod"
+title = "我的个人主页 - 最终测试"
+theme = "mytheme"
 
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
+
+[params]
+  env = "production"
+  title = "My Portfolio"
+  description = "这是关于计算机科学、数据分析与个人项目的记录"
+  keywords = ["Blog", "Portfolio", "Computer Science"]
+  author = "ZungTim"
+  
+  # 默认主题颜色 (auto, dark, light)
+  defaultTheme = "auto"
+  
+  # 首页配置
+  [params.homeInfoParams]
+    Title = "你好，我是 ZungTim 👋"
+    Content = "一名热爱代码的 CS 学生 | 专注于数据分析与后端开发"
+  
+  # 社交图标 (显示在首页)
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/zungtim"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:your-email@example.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "关于我"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "posts"
+    name = "博客文章"
+    url = "/posts/"
+    weight = 20
+  [[menu.main]]
+    identifier = "projects"
+    name = "项目经历"
+    url = "/projects/"
+    weight = 30
