@@ -1,7 +1,7 @@
 baseURL = "https://zungtim.github.io/"
 languageCode = "zh-cn"
-title = "我的个人主页 - 最终测试"
-theme = "mytheme"
+title = "我的个人主页"
+theme = "PaperMod"
 
 enableRobotsTXT = true
 buildDrafts = false
@@ -10,40 +10,47 @@ buildExpired = false
 
 [params]
   env = "production"
-  title = "My Portfolio"
-  description = "这是关于计算机科学、数据分析与个人项目的记录"
+  title = "ZungTim's Portfolio"
+  description = "一名热爱代码的 CS 学生"
   keywords = ["Blog", "Portfolio", "Computer Science"]
   author = "ZungTim"
-  
-  # 默认主题颜色 (auto, dark, light)
   defaultTheme = "auto"
   
   # 首页配置
   [params.homeInfoParams]
     Title = "你好，我是 ZungTim 👋"
-    Content = "一名热爱代码的 CS 学生 | 专注于数据分析与后端开发"
+    Content = "欢迎来到我的数字花园 | 📍 ChemEng / CS / 科研 / 摄影"
   
-  # 社交图标 (显示在首页)
+  # 社交图标
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/zungtim"
   [[params.socialIcons]]
     name = "email"
-    url = "mailto:your-email@example.com"
+    url = "mailto:zungtimwong@gmail.com"
 
 [menu]
+  # 导航栏设计：点击直接跳转到 about 页面的对应板块
   [[menu.main]]
     identifier = "about"
-    name = "关于我"
+    name = "👋 关于我"
     url = "/about/"
     weight = 10
+  
   [[menu.main]]
-    identifier = "posts"
-    name = "博客文章"
-    url = "/posts/"
+    identifier = "education"
+    name = "🎓 本科经历"
+    url = "/about/#education" # 跳转到 #education 锚点
     weight = 20
+
   [[menu.main]]
-    identifier = "projects"
-    name = "项目经历"
-    url = "/projects/"
+    identifier = "research"
+    name = "🔬 科研竞赛"
+    url = "/about/#research" # 跳转到 #research 锚点
     weight = 30
+
+  [[menu.main]]
+    identifier = "travel"
+    name = "✈️ 旅行足迹"
+    url = "/about/#travel" # 跳转到 #travel 锚点
+    weight = 40
